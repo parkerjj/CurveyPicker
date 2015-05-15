@@ -14,6 +14,23 @@
 		2C6952981B0074DB00308655 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6952971B0074DB00308655 /* Images.xcassets */; };
 		2C69529B1B0074DB00308655 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6952991B0074DB00308655 /* LaunchScreen.xib */; };
 		2C6952A71B0074DB00308655 /* CurveyPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6952A61B0074DB00308655 /* CurveyPickerTests.m */; };
+		2C6952B21B00751B00308655 /* CPPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6952B11B00751B00308655 /* CPPickerView.m */; };
+		2C6952CA1B008FF400308655 /* BCMeshBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6952B71B008FF400308655 /* BCMeshBuffer.m */; };
+		2C6952CB1B008FF400308655 /* BCMeshContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6952B91B008FF400308655 /* BCMeshContentView.m */; };
+		2C6952CC1B008FF400308655 /* BCMeshShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2C6952BA1B008FF400308655 /* BCMeshShader.fsh */; };
+		2C6952CD1B008FF400308655 /* BCMeshShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6952BC1B008FF400308655 /* BCMeshShader.m */; };
+		2C6952CE1B008FF400308655 /* BCMeshShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 2C6952BD1B008FF400308655 /* BCMeshShader.vsh */; };
+		2C6952CF1B008FF400308655 /* BCMeshTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6952BF1B008FF400308655 /* BCMeshTexture.m */; };
+		2C6952D01B008FF400308655 /* BCMeshTransform+Interpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6952C11B008FF400308655 /* BCMeshTransform+Interpolation.m */; };
+		2C6952D11B008FF400308655 /* BCMeshTransform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C6952C31B008FF400308655 /* BCMeshTransform.mm */; };
+		2C6952D21B008FF400308655 /* BCMeshTransformAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6952C51B008FF400308655 /* BCMeshTransformAnimation.m */; };
+		2C6952D31B008FF400308655 /* BCMeshTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6952C71B008FF400308655 /* BCMeshTransformView.m */; };
+		2C6952D41B008FF400308655 /* BCMutableMeshTransform+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6952C91B008FF400308655 /* BCMutableMeshTransform+Convenience.m */; };
+		2C6952D61B00901600308655 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6952D51B00901600308655 /* OpenGLES.framework */; };
+		2C6952D81B00902100308655 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6952D71B00902100308655 /* CoreGraphics.framework */; };
+		2C6952DA1B00902E00308655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6952D91B00902E00308655 /* Foundation.framework */; };
+		2C6952DC1B00903300308655 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6952DB1B00903300308655 /* UIKit.framework */; };
+		2C9AC9E61B0227180024C68A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9AC9E51B0227180024C68A /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +57,34 @@
 		2C6952A01B0074DB00308655 /* CurveyPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurveyPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6952A51B0074DB00308655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C6952A61B0074DB00308655 /* CurveyPickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurveyPickerTests.m; sourceTree = "<group>"; };
+		2C6952B01B00751B00308655 /* CPPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPickerView.h; sourceTree = "<group>"; };
+		2C6952B11B00751B00308655 /* CPPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPPickerView.m; sourceTree = "<group>"; };
+		2C6952B61B008FF400308655 /* BCMeshBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshBuffer.h; sourceTree = "<group>"; };
+		2C6952B71B008FF400308655 /* BCMeshBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshBuffer.m; sourceTree = "<group>"; };
+		2C6952B81B008FF400308655 /* BCMeshContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshContentView.h; sourceTree = "<group>"; };
+		2C6952B91B008FF400308655 /* BCMeshContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshContentView.m; sourceTree = "<group>"; };
+		2C6952BA1B008FF400308655 /* BCMeshShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BCMeshShader.fsh; sourceTree = "<group>"; };
+		2C6952BB1B008FF400308655 /* BCMeshShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshShader.h; sourceTree = "<group>"; };
+		2C6952BC1B008FF400308655 /* BCMeshShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshShader.m; sourceTree = "<group>"; };
+		2C6952BD1B008FF400308655 /* BCMeshShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BCMeshShader.vsh; sourceTree = "<group>"; };
+		2C6952BE1B008FF400308655 /* BCMeshTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTexture.h; sourceTree = "<group>"; };
+		2C6952BF1B008FF400308655 /* BCMeshTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshTexture.m; sourceTree = "<group>"; };
+		2C6952C01B008FF400308655 /* BCMeshTransform+Interpolation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BCMeshTransform+Interpolation.h"; sourceTree = "<group>"; };
+		2C6952C11B008FF400308655 /* BCMeshTransform+Interpolation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BCMeshTransform+Interpolation.m"; sourceTree = "<group>"; };
+		2C6952C21B008FF400308655 /* BCMeshTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTransform.h; sourceTree = "<group>"; };
+		2C6952C31B008FF400308655 /* BCMeshTransform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BCMeshTransform.mm; sourceTree = "<group>"; };
+		2C6952C41B008FF400308655 /* BCMeshTransformAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTransformAnimation.h; sourceTree = "<group>"; };
+		2C6952C51B008FF400308655 /* BCMeshTransformAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshTransformAnimation.m; sourceTree = "<group>"; };
+		2C6952C61B008FF400308655 /* BCMeshTransformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTransformView.h; sourceTree = "<group>"; };
+		2C6952C71B008FF400308655 /* BCMeshTransformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshTransformView.m; sourceTree = "<group>"; };
+		2C6952C81B008FF400308655 /* BCMutableMeshTransform+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BCMutableMeshTransform+Convenience.h"; sourceTree = "<group>"; };
+		2C6952C91B008FF400308655 /* BCMutableMeshTransform+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BCMutableMeshTransform+Convenience.m"; sourceTree = "<group>"; };
+		2C6952D51B00901600308655 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		2C6952D71B00902100308655 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2C6952D91B00902E00308655 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2C6952DB1B00903300308655 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2C6952DD1B00907A00308655 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2C9AC9E51B0227180024C68A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +92,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9AC9E61B0227180024C68A /* QuartzCore.framework in Frameworks */,
+				2C6952DC1B00903300308655 /* UIKit.framework in Frameworks */,
+				2C6952DA1B00902E00308655 /* Foundation.framework in Frameworks */,
+				2C6952D81B00902100308655 /* CoreGraphics.framework in Frameworks */,
+				2C6952D61B00901600308655 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +116,7 @@
 				2C6952891B0074DB00308655 /* CurveyPicker */,
 				2C6952A31B0074DB00308655 /* CurveyPickerTests */,
 				2C6952881B0074DB00308655 /* Products */,
+				2CB410DB1B06031800661E10 /* Framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,10 +132,13 @@
 		2C6952891B0074DB00308655 /* CurveyPicker */ = {
 			isa = PBXGroup;
 			children = (
+				2C6952B51B008FF400308655 /* BCMeshTransformView */,
 				2C69528E1B0074DB00308655 /* AppDelegate.h */,
 				2C69528F1B0074DB00308655 /* AppDelegate.m */,
 				2C6952911B0074DB00308655 /* ViewController.h */,
 				2C6952921B0074DB00308655 /* ViewController.m */,
+				2C6952B01B00751B00308655 /* CPPickerView.h */,
+				2C6952B11B00751B00308655 /* CPPickerView.m */,
 				2C6952941B0074DB00308655 /* Main.storyboard */,
 				2C6952971B0074DB00308655 /* Images.xcassets */,
 				2C6952991B0074DB00308655 /* LaunchScreen.xib */,
@@ -98,6 +152,7 @@
 			children = (
 				2C69528B1B0074DB00308655 /* Info.plist */,
 				2C69528C1B0074DB00308655 /* main.m */,
+				2C6952DD1B00907A00308655 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,6 +172,45 @@
 				2C6952A51B0074DB00308655 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C6952B51B008FF400308655 /* BCMeshTransformView */ = {
+			isa = PBXGroup;
+			children = (
+				2C6952B61B008FF400308655 /* BCMeshBuffer.h */,
+				2C6952B71B008FF400308655 /* BCMeshBuffer.m */,
+				2C6952B81B008FF400308655 /* BCMeshContentView.h */,
+				2C6952B91B008FF400308655 /* BCMeshContentView.m */,
+				2C6952BA1B008FF400308655 /* BCMeshShader.fsh */,
+				2C6952BB1B008FF400308655 /* BCMeshShader.h */,
+				2C6952BC1B008FF400308655 /* BCMeshShader.m */,
+				2C6952BD1B008FF400308655 /* BCMeshShader.vsh */,
+				2C6952BE1B008FF400308655 /* BCMeshTexture.h */,
+				2C6952BF1B008FF400308655 /* BCMeshTexture.m */,
+				2C6952C01B008FF400308655 /* BCMeshTransform+Interpolation.h */,
+				2C6952C11B008FF400308655 /* BCMeshTransform+Interpolation.m */,
+				2C6952C21B008FF400308655 /* BCMeshTransform.h */,
+				2C6952C31B008FF400308655 /* BCMeshTransform.mm */,
+				2C6952C41B008FF400308655 /* BCMeshTransformAnimation.h */,
+				2C6952C51B008FF400308655 /* BCMeshTransformAnimation.m */,
+				2C6952C61B008FF400308655 /* BCMeshTransformView.h */,
+				2C6952C71B008FF400308655 /* BCMeshTransformView.m */,
+				2C6952C81B008FF400308655 /* BCMutableMeshTransform+Convenience.h */,
+				2C6952C91B008FF400308655 /* BCMutableMeshTransform+Convenience.m */,
+			);
+			path = BCMeshTransformView;
+			sourceTree = "<group>";
+		};
+		2CB410DB1B06031800661E10 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				2C9AC9E51B0227180024C68A /* QuartzCore.framework */,
+				2C6952DB1B00903300308655 /* UIKit.framework */,
+				2C6952D91B00902E00308655 /* Foundation.framework */,
+				2C6952D71B00902100308655 /* CoreGraphics.framework */,
+				2C6952D51B00901600308655 /* OpenGLES.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +293,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6952CC1B008FF400308655 /* BCMeshShader.fsh in Resources */,
+				2C6952CE1B008FF400308655 /* BCMeshShader.vsh in Resources */,
 				2C6952961B0074DB00308655 /* Main.storyboard in Resources */,
 				2C69529B1B0074DB00308655 /* LaunchScreen.xib in Resources */,
 				2C6952981B0074DB00308655 /* Images.xcassets in Resources */,
@@ -219,9 +315,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6952D01B008FF400308655 /* BCMeshTransform+Interpolation.m in Sources */,
 				2C6952931B0074DB00308655 /* ViewController.m in Sources */,
+				2C6952B21B00751B00308655 /* CPPickerView.m in Sources */,
+				2C6952CD1B008FF400308655 /* BCMeshShader.m in Sources */,
+				2C6952D41B008FF400308655 /* BCMutableMeshTransform+Convenience.m in Sources */,
+				2C6952D11B008FF400308655 /* BCMeshTransform.mm in Sources */,
+				2C6952D21B008FF400308655 /* BCMeshTransformAnimation.m in Sources */,
 				2C6952901B0074DB00308655 /* AppDelegate.m in Sources */,
 				2C69528D1B0074DB00308655 /* main.m in Sources */,
+				2C6952CF1B008FF400308655 /* BCMeshTexture.m in Sources */,
+				2C6952D31B008FF400308655 /* BCMeshTransformView.m in Sources */,
+				2C6952CB1B008FF400308655 /* BCMeshContentView.m in Sources */,
+				2C6952CA1B008FF400308655 /* BCMeshBuffer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +453,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CurveyPicker/PrefixHeader.pch;
 				INFOPLIST_FILE = CurveyPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +465,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CurveyPicker/PrefixHeader.pch;
 				INFOPLIST_FILE = CurveyPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +526,7 @@
 				2C6952AC1B0074DB00308655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C6952AD1B0074DB00308655 /* Build configuration list for PBXNativeTarget "CurveyPickerTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +535,7 @@
 				2C6952AF1B0074DB00308655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
