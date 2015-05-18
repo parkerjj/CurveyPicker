@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CPPickerView.h"
 
-@interface ViewController : UIViewController<CPPickerViewDataSource>{
+@interface ViewController : UIViewController<CPPickerViewDataSource,CPPickerViewDelegate>{
     IBOutlet UILabel *_label;
 }
 

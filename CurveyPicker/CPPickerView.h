@@ -18,12 +18,17 @@
 @end
 
 
+@protocol CPPickerViewDelegate <NSObject>
+@required
+- (void)pickerView:(CPPickerView*)pickerView didSelectRow:(NSInteger)row;
+@end
+
 
 @interface CPPickerView : BCMeshTransformView<UITableViewDataSource,UITableViewDelegate>{
     
 }
 @property (nonatomic,weak) id <CPPickerViewDataSource> dataSource;
-
+@property (nonatomic,weak) id <CPPickerViewDelegate> delegate;
 
 /**
  *  Please use this method to init this object,It will automaticlly setup

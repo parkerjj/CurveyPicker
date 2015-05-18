@@ -31,6 +31,7 @@
 - (IBAction)longPress:(id)sender{
     CPPickerView *pickerView = [[CPPickerView alloc] initWithSender:sender];
     [pickerView setDataSource:self];
+    [pickerView setDelegate:self];
     [self.view addSubview:pickerView];
     
 }
@@ -57,5 +58,8 @@
 
 - (NSString*)pickerView:(CPPickerView *)pickerView stringForRow:(NSInteger)row{
     return [kLastNameArray objectAtIndex:row];
+}
+- (void)pickerView:(CPPickerView *)pickerView didSelectRow:(NSInteger)row{
+    NSLog(@"Row: %ld has been selected",(long)row);
 }
 @end

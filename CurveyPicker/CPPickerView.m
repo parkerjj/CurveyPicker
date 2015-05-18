@@ -186,7 +186,7 @@ CGAffineTransform GetCGAffineTransformRotateAroundPoint(float centerX, float cen
 
             self.meshTransform = transform;
             
-            
+            [self setCenter:CGPointMake(self.center.x, senderView.center.y)];
             
         }
         return self;
@@ -227,6 +227,10 @@ CGAffineTransform GetCGAffineTransformRotateAroundPoint(float centerX, float cen
     
     [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:rowSelected inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:animation];
     [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:rowSelected inSection:0] animated:animation scrollPosition:UITableViewScrollPositionNone];
+    
+    if ([_delegate respondsToSelector:@selector(pickerView:didSelectRow:)]) {
+        [_delegate pickerView:self didSelectRow:rowSelected];
+    }
 }
 
 
