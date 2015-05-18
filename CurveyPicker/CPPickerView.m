@@ -8,6 +8,8 @@
 
 #define kCellHeight 44.0f
 #define kLineWidth 1.0f
+#define kAutoRemoveDuration 5.0f
+
 
 #import "CPPickerView.h"
 #import "BCMutableMeshTransform+Convenience.h"
@@ -19,7 +21,9 @@
     CGFloat _leftOrRightSign;  // Left: -1  Right: 1
     CGPoint _senderPointInSSuperView;
     CAGradientLayer *_gradientLayer;        // 渐变背景
-
+    
+    NSThread *_timerThread;
+    BOOL    _userAlreadyTouched;            //User Touched
 }
 
 @end
@@ -43,7 +47,11 @@ CGAffineTransform GetCGAffineTransformRotateAroundPoint(float centerX, float cen
 @implementation CPPickerView
 
 
+- (void)dealloc{
+    [_timerThread cancel];
+    _timerThread = nil;
 
+}
 
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -107,6 +115,11 @@ CGAffineTransform GetCGAffineTransformRotateAroundPoint(float centerX, float cen
         _gradientLayer.endPoint = CGPointMake(0.5, 0.95);
         
         self.contentView.layer.mask = _gradientLayer;
+        
+        _userAlreadyTouched = YES;
+        
+        _timerThread = [[NSThread alloc] initWithTarget:self selector:@selector(checkTimerToRemoveSelf) object:nil];
+        [_timerThread start];
         
     }
     return self;
@@ -206,6 +219,46 @@ CGAffineTransform GetCGAffineTransformRotateAroundPoint(float centerX, float cen
 }
 
 
+- (void)setSelectedRow:(NSInteger)rowSelected animation:(BOOL)animation{
+    NSArray *selectedRows = [_tableView indexPathsForSelectedRows];
+    for (NSIndexPath *indexPath in selectedRows) {
+        [_tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+    
+    [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:rowSelected inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:animation];
+    [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:rowSelected inSection:0] animated:animation scrollPosition:UITableViewScrollPositionNone];
+}
+
+
+- (void)checkTimerToRemoveSelf{
+    if ([[NSThread currentThread] isMainThread]) {
+        return;
+    }
+    while (YES) {
+        if (_userAlreadyTouched == YES) {
+            _userAlreadyTouched = NO;
+            [NSThread sleepForTimeInterval:kAutoRemoveDuration];
+        }else{
+            [self performSelectorOnMainThread:@selector(removeFromSuperview) withObject:self waitUntilDone:YES];
+            [NSThread exit];
+        }
+    }
+
+    
+    
+}
+
+- (void)removeFromSuperview{
+
+    [UIView animateWithDuration:.25f delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+        [self setAlpha:0.0f];
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [super removeFromSuperview];
+        }
+    }];
+}
+
 #pragma mark - Delegate & DataSource
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -237,6 +290,11 @@ CGAffineTransform GetCGAffineTransformRotateAroundPoint(float centerX, float cen
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self setSelectedRow:indexPath.row animation:YES];
+    _userAlreadyTouched = YES;
+}
+
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     if (decelerate){
@@ -244,12 +302,16 @@ CGAffineTransform GetCGAffineTransformRotateAroundPoint(float centerX, float cen
         return;
     }
     [self autolayoutCellForCenter];
+    _userAlreadyTouched = YES;
+
     
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     NSLog(@"结束滚动");
     [self autolayoutCellForCenter];
+    _userAlreadyTouched = YES;
+
 
 }
 

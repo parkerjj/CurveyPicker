@@ -24,6 +24,29 @@
 }
 @property (nonatomic,weak) id <CPPickerViewDataSource> dataSource;
 
+
+/**
+ *  Please use this method to init this object,It will automaticlly setup
+ *  the frame where should this CPPickerView be.
+ *
+ *
+ *  @param sender Any UIControl or UIView, It will automaticlly setup
+ *                the frame where should this CPPickerView be.
+ *
+ *  @return CPPickerView Object
+ */
 - (id)initWithSender:(id)sender;
+
+
+/**
+ *  Set selected row in PickerView, and if the row is not showing
+ *  it will scroll to row.
+ *
+ *  @param rowSelected NSInteger
+ *  @param animation   Wanna Animation?
+ */
+- (void)setSelectedRow:(NSInteger)rowSelected animation:(BOOL)animation;
+
+
 
 @end
